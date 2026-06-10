@@ -1,0 +1,128 @@
+/* ---------- [ Root ] ---------- */
+
+:root {
+  /* [ Tamanhos para textos ] */
+  --paragrafo: clamp(1.5rem, 2.5vw, 2rem);
+  --titulo: clamp(2rem, 3vw, 3rem);
+  /* [ Espaços ] */
+  --margem: clamp(15px, 3vw, 30px);
+  --preenchimento: clamp(10px, 2vw, 20px);
+  --gap: clamp(15px, 7vw, 25px);
+  /* [ Tamanhos para imagens ] */
+  --img-titulo: clamp(100px, 10vw, 200px);
+  --img-conteudo: clamp(220px, 90vw, 370px);
+}
+
+/* ---------- [ Base ] ---------- */
+
+* {
+  color: white;
+  font-size: 100%;
+  scroll-behavior: smooth;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+  font-family: "VT323", "Press Start 2P";
+  background-color: black;
+}
+
+header, footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--preenchimento);
+  margin-bottom: var(--margem);
+  border-bottom: 2px solid #3127f5;
+}
+
+footer {
+  border-top: 2px solid #3127f5;
+  border-bottom: none;
+}
+
+img {
+  width: var(--img-conteudo);
+  height: auto;
+  margin-bottom: var(--margem);
+}
+
+/* ---------- [ Tipografia ] ---------- */
+
+h1 {
+  color: #8b27f5;
+  font-size: var(--titulo);
+}
+
+p,
+time {
+  margin-bottom: var(--margem);
+  font-size: var(--paragrafo);
+}
+
+time {
+  margin: 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ---------- [ Divs ] ---------- */
+
+.conteudo {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 var(--margem);
+}
+
+.imagem {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid #3127f5;
+  border-radius: 20px;
+  padding: var(--preenchimento);
+  margin-bottom: var(--margem);
+}
+
+/* ---------- [ Scrollbar ] ---------- */
+
+::-webkit-scrollbar {
+  width: 0.5rem; /* equivale a 8px */
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+  border: 0.125rem solid white; /* equivale a 2px */
+}
+
+::-webkit-scrollbar-thumb {
+  background: white;
+  border: 0.125rem solid white; /* equivale a 2px */
+  border-radius: 0.25rem; /* equivale a 4px */
+}
+
+/* ---------- [ Medidas especias ] ---------- */
+@media (max-width: 655px) {
+  body {
+    line-height: 1.6;
+    margin: 0;
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3 {
+    font-size: 1.5rem;
+  }
+  p,
+  ul,
+  a {
+    font-size: 1.25rem;
+  }
+  .card {
+    margin: 0 var(--margem);
+  }
+}
